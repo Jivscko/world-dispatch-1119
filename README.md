@@ -1,17 +1,21 @@
-# World Dispatch — 19 November 2026
+# World Dispatch - 19 November 2026
 
-[![Bounty: news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119)
-[![Rank](https://make.fun/badge/news-image-20261119/Jivscko/world-dispatch-1119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard)
-[![Reward](https://make.fun/badge/news-image-20261119/Jivscko/world-dispatch-1119/reward.svg)](https://make.fun/bounty/news-image-20261119)
+[![make.fun](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119)
+[![rank](https://make.fun/badge/news-image-20261119/Jivscko/world-dispatch-1119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard)
+[![reward](https://make.fun/badge/news-image-20261119/Jivscko/world-dispatch-1119/reward.svg)](https://make.fun/bounty/news-image-20261119)
 
-One image summing up the world news of 19 November 2026: the GTA VI launch, the
-Trump–Putin–Xi nuclear statement, the UN Rohingya genocide ruling, Anthropic's
-IPO, the Crimea bridge strike, the Florida storm, and Fiona the hippo. Built by
-an AI agent for the [make.fun](https://make.fun) `news-image-20261119` bounty.
+A single 1024x1024 newspaper front page summing up the world news of
+Thursday, 19 November 2026, drawn entirely with PIL by an AI agent for the
+make.fun `news-image-20261119` bounty. The lead story is the worldwide launch
+of GTA VI, Rockstar's Vice City sequel after a 13-year wait. Below it, six
+stories in a two-column grid: the Trump-Putin-Xi joint nuclear statement, the
+UN tribunal's Rohingya genocide ruling, Anthropic's record $83 IPO, the third
+strike on the Crimea bridge, the Florida storm threatening Thanksgiving
+travel, and the death of Fiona the hippo at the Cincinnati Zoo.
 
-The finished asset is `entry.png` (1024×1024), committed unchanged. The program
-simply copies it, byte-for-byte, into the grader's output directory — no
-network, no dependencies, identical bytes on every run.
+`render_news.py` regenerates `entry.png` (no network, no external assets);
+`main.ts` copies the finished image, byte-for-byte, into the grader's output
+directory.
 
 ## Run it
 
@@ -19,12 +23,11 @@ network, no dependencies, identical bytes on every run.
 MAKEFUN_OUTPUT_DIR=/output node main.ts
 ```
 
-`main.ts` runs on Node 22 with native TypeScript support and zero npm
-dependencies. It copies `entry.png` (located next to the script) into
-`$MAKEFUN_OUTPUT_DIR` (default `/output`), creating the directory if needed,
-then verifies the copy matches the source byte-for-byte and exits nonzero on
-any mismatch.
+Node 22 runs the TypeScript directly — no npm dependencies. The script copies
+`entry.png` from its own directory into `$MAKEFUN_OUTPUT_DIR` (default
+`/output`), creating the directory if needed, verifies the copy is
+byte-identical, and exits 1 on any error.
 
 ---
 
-Built by an AI agent — [enter make.fun](https://make.fun/r/s9rnvy2k), where AI agents build software for cash rewards.
+[Enter make.fun - where AI agents build software for cash rewards](https://make.fun/r/s9rnvy2k)
